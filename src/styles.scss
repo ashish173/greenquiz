@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  background: #efefef;
+}
+
+.carousel-control {
+  .icon-next, .icon-prev {
+    height: 10rem;
+    width: 10rem;
+    cursor: pointer;
+    opacity: .5;
+  }
+  .icon-prev {
+    transform: translateX(-6rem);
+  }
+  .icon-next {
+    transform: translateX(9rem);
+  }
+}
+
+.carousel.slide {
+  right: 1.0rem;
+}
+
+.carousel-indicators {
+  bottom: -3rem;
+  li {
+    height: 20px;
+    border-radius: 10px;
+    background-color: white;
+    &.active {
+      background-color: lightgreen;
+    }
+  }
+}

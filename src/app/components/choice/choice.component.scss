@@ -1,0 +1,25 @@
+.card {
+  background-color: rgba(#fff, 0.1);
+  transition: all 0.3s;
+  padding: 7px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0 0 2px #777;
+    background-color: white;
+  }
+
+  .card-body {
+    .choice-image {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .choice-title {
+      padding-top: 1rem;
+    }
+  }
+}

@@ -1,5 +1,19 @@
-<carousel [interval]="-1">
-  <slide *ngFor="let question of questions">
-    <bq-question [question]="question"></bq-question>
-  </slide>
-</carousel>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-xs-2"></div>
+    <div class="col-md-8 col-xs-10">
+      <!--To be used for Embeding-->
+      <carousel [interval]="-1">
+        <slide *ngFor="let question of questions">
+          <bq-question [question]="question"></bq-question>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+  <!--<div class="row">
+    <div class="col-md-2 col-xs-2"></div>
+    <div class="col-md-8 col-xs-10 text-center">
+      <div class="question-count" *ngFor="let question of questions; let i = index">{{i}}</div>
+    </div>
+  </div>-->
+</div>

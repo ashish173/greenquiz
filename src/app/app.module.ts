@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { QuestionComponent } from './components/question/question.component';
-import { ChoiceListComponent } from './components/choice-list/choice-list.component';
 import { ChoiceComponent } from './components/choice/choice.component';
 import { SummaryComponent } from './summary/summary.component';
 
@@ -14,7 +13,6 @@ import { SummaryComponent } from './summary/summary.component';
   declarations: [
     AppComponent,
     QuestionComponent,
-    ChoiceListComponent,
     ChoiceComponent,
     SummaryComponent
   ],
