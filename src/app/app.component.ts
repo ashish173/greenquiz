@@ -10,7 +10,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 export class AppComponent {
   questions = DUMMY_DATA;
   summary = {};
+  selections = {};
   showSummary = false;
+  activeSlideIndex: number;
 
   constructor() {
   }
@@ -19,13 +21,19 @@ export class AppComponent {
     this.summary[questionIdx] =
       this.questions[questionIdx].choices[choiceIdx].summary;
 
+    this.selections[questionIdx] = choiceIdx;
+
     if (questionIdx === this.questions.length - 1) {
       this.showSummary = true;
+    } else {
+      this.activeSlideIndex += 1;
     }
   }
 
-  reset() {
+  resetQuiz() {
     this.showSummary = false;
+    this.selections = {};
+    this.summary = {};
   }
 
   getSummary() {

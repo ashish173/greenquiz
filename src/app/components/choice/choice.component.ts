@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChoiceComponent implements OnInit {
   @Input() choice: Choice;
+  @Input() isSelected: Choice;
 
   constructor() { }
 

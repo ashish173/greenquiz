@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class QuestionComponent implements OnInit {
   @Input() question: Question;
+  @Input() selected: number;
   @Output() selectedChoice = new EventEmitter();
 
   constructor() { }
