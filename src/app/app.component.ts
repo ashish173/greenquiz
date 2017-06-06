@@ -18,10 +18,6 @@ export class AppComponent {
   constructor() {
   }
 
-  optionToggle() {
-    this.option = this.option ? true : false;
-  }
-
   onSelected(questionIdx, choiceIdx) {
     this.summary[questionIdx] =
       this.questions[questionIdx].choices[choiceIdx].summary;
