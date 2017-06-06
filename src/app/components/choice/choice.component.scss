@@ -7,8 +7,11 @@
   border-radius: 5px;
 
   &:hover {
-    box-shadow: 0 0 2px #777;
     background-color: white;
+    
+    .card-body > .choice-select {
+      opacity: 1;
+    }
   }
 
   .card-body {
@@ -20,6 +23,18 @@
 
     .choice-title {
       padding-top: 1rem;
+    }
+
+    .choice-select {
+      opacity: 0;
+      transition: opacity 0.3s;
+      position: absolute;
+      height: 3rem;
+      background: white;
+      border-radius: 99px;
+      right: 1rem;
+      top: 1rem;
+      box-shadow: 0 0 5px #aaa;
     }
   }
 }

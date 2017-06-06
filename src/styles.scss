@@ -5,17 +5,21 @@ body {
 }
 
 .carousel-control {
+  opacity: 1;
+
+  &.left {
+    transform: translateX(-7rem);
+  }
+
+  &.right {
+    transform: translateX(9rem);    
+  }
+  
   .icon-next, .icon-prev {
     height: 10rem;
     width: 10rem;
     cursor: pointer;
     opacity: .5;
-  }
-  .icon-prev {
-    transform: translateX(-6rem);
-  }
-  .icon-next {
-    transform: translateX(9rem);
   }
 }
 

@@ -8,4 +8,15 @@
   .question-count {
     float: left;
   }
+
+  .summary {
+    top: 40%;
+    position: fixed;
+    left: 0%;
+    width: 100%;
+    button {
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+  }
 }
