@@ -1,22 +1,26 @@
 ### Design
 
-The whole demo application is divided into components each component holds it's own styling and template along with the logic.
+The whole demo quiz application is divided into components. Each component holds it's own styling and template along with the logic which is written in [Typescript](https://www.typescriptlang.org/).
 
-`Models` represent the basic types for eg. `Question` & `Choice`.
+This application is built with [Angular 4.0.0](https://angular.io).
 
-`AppComponent` is the basic skeleton of the project.
+In the application `Models` represent the basic types in this application for eg. `Question` & `Choice`.
 
-`ChoiceComponent` and `QuestionComponent` contain the html, css & typescript for `Choice` & `Question` respectively.
+`AppComponent` holds the basic skeleton of the project.
 
-Data is taken dummy-data.ts file which is present in `JSON` format. 
+`ChoiceComponent` and `QuestionComponent` contain the HTML, CSS & Typescript for `Choice` & `Question` components respectively.
+
+Data is taken from `dummy-data.ts` file which is present in `JSON` format.
 
 ### Implementation
 
-Application gets initialised in the application component which passes data to the `QuestionComponent` which is primarily a question 
-object.
+Application gets initialised in the application component which passes data to the `QuestionComponent` which is primarily a question object.
 
-This component gets rendered inside the carousel component which is a part of the (ngx-bootstrap)[test](https://google.com) library.
+`QuestionComponent` gets rendered inside the `CarouselComponent` which is a part of the [ngx-bootstrap](http://valor-software.com/ngx-bootstrap/) library.
 
+The Typescript code gets transpilled to Javascript code using webpack. The minified version is hosted on firebase [here](https://buzzquiz-1e3be.firebaseapp.com/).
+
+For styling I have used SASS.
 
 ### Accessibility
 
