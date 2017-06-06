@@ -1,9 +1,10 @@
+.option {
+  float: right;
+  margin-right: 10px;
+}
 .container-fluid {
   width: 80vw;
   top: 4vh;
-  .option {
-    float: right;
-  }
   carousel {
     width: 100%;
     height: 100%;
