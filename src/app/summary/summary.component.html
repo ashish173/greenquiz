@@ -1,5 +1,13 @@
 <div class="summary text-center" [@flyInDown]="'in'">
-  <button class="btn btn-warning" (click)="reset()"> Take Quiz Again</button>
   <br>
-  {{summary}}
+  <div class="summary-section">
+    <h1 class="heading">Summary</h1>
+    <p>{{summary}}</p>
+    <ul class="actions">
+      <li>
+        <a class="button special" (click)="reset()">Take Quiz again</a>
+      </li>
+
+    </ul>
+  </div>
 </div>

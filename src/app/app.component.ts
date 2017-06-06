@@ -12,9 +12,14 @@ export class AppComponent {
   summary = {};
   selections = {};
   showSummary = false;
+  option = false;
   activeSlideIndex = 0;
 
   constructor() {
+  }
+
+  optionToggle() {
+    this.option = this.option ? true : false;
   }
 
   onSelected(questionIdx, choiceIdx) {
@@ -28,11 +33,11 @@ export class AppComponent {
       this.showSummary = true;
     } else {
       // FOR AUTO change question
-      // if (this.activeSlideIndex === this.questions.length -1) {
-      //   this.activeSlideIndex = 0;
-      // } else {
-      //   this.activeSlideIndex += 1;
-      // }
+      if (this.activeSlideIndex === this.questions.length -1 && this.option) {
+        this.activeSlideIndex = 0;
+      } else if (this.option) {
+        this.activeSlideIndex += 1;
+      }
     }
   }
 
