@@ -1,3 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<carousel [interval]="-1">
+  <slide *ngFor="let question of questions">
+    <bq-question [question]="question"></bq-question>
+  </slide>
+</carousel>

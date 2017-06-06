@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {DUMMY_DATA} from './data/dummy-data';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @Component({
   selector: 'bq-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bq works!';
+  questions = DUMMY_DATA;
+
+  constructor() {
+  }
 }
