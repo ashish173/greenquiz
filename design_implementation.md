@@ -20,10 +20,11 @@ This component gets rendered inside the carousel component which is a part of th
 
 ### Accessibility
 
-I have assigned `alt` attribute in the image tags across the templates.
+I have assigned `alt` attribute in the image tags across the templates. Screenreaders pick these really well helping differently abled people.
 
 
 ### Future scope
 
 * Support for arrow key navigation.
 * Support for alpha key choice selection.
+
