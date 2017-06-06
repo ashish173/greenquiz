@@ -12,7 +12,7 @@ export class AppComponent {
   summary = {};
   selections = {};
   showSummary = false;
-  activeSlideIndex: number;
+  activeSlideIndex = 0;
 
   constructor() {
   }
@@ -23,11 +23,21 @@ export class AppComponent {
 
     this.selections[questionIdx] = choiceIdx;
 
-    if (questionIdx === this.questions.length - 1) {
+    if (Object.keys(this.selections).length === this.questions.length) {
+      this.activeSlideIndex = 0;
       this.showSummary = true;
     } else {
-      this.activeSlideIndex += 1;
+      // FOR AUTO change question
+      // if (this.activeSlideIndex === this.questions.length -1) {
+      //   this.activeSlideIndex = 0;
+      // } else {
+      //   this.activeSlideIndex += 1;
+      // }
     }
+  }
+
+  changeActiveSlide(index) {
+    this.activeSlideIndex = index;
   }
 
   resetQuiz() {

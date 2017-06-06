@@ -5,7 +5,16 @@
       <!--To be used for Embeding-->
       <carousel [interval]="-1" [(activeSlide)]="activeSlideIndex" *ngIf="!showSummary">
         <slide *ngFor="let question of questions; let i = index">
-          <bq-question [question]="question" (selectedChoice)="onSelected(i, $event)" [selected]="selections[i]"></bq-question>
+          <bq-question
+            *ngIf="activeSlideIndex == i"
+            [question]="question"
+            (selectedChoice)="onSelected(i, $event)"
+            [selected]="selections[i]"></bq-question>
+          <ul class="list-inline">
+            <li *ngFor="let question of questions; let i = index" (click)="changeActiveSlide(i)" [ngClass]="{'active': activeSlideIndex == i,'selected': selections[i] != null}">
+              {{i}}
+            </li>
+          </ul>
         </slide>
       </carousel>
 
