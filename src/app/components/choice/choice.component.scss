@@ -1,5 +1,5 @@
 .card {
-  background-color: rgba(#fff, 0.1);
+  background: rgba(white, 0.7);
   transition: all 0.3s;
   padding: 7px;
   cursor: pointer;
@@ -7,8 +7,8 @@
   border-radius: 5px;
 
   &:hover, &.active {
-    background-color: white;
-    
+    box-shadow: 0 0 20px #999;
+    transform: scale(1.05);
     .card-body > .choice-select {
       opacity: 1;
     }
@@ -18,11 +18,12 @@
     .choice-image {
       width: 100%;
       object-fit: cover;
-      border-radius: 5px;
+      border-radius: 5px 5px 0 0;
     }
 
     .choice-title {
       padding-top: 1rem;
+      font-size: 0.9rem;
     }
 
     .choice-select {
