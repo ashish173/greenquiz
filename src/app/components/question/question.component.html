@@ -5,12 +5,19 @@
 
   <div class="choices">
     <div class="container-fluid">
-      <div class="row">
+      <div class="row" *ngIf="question.drawType == 'card'; else drawList">
         <div class="col-lg-4 col-xs-6 col-sm-4 col-md-4" *ngFor="let choice of question.choices; let i = index">
-          <bq-choice [choice]="choice" (click)="onClicked(i)" [isSelected]="selected == i"></bq-choice>
+          <bq-choice drawType='card' [choice]="choice" (click)="onClicked(i)" [isSelected]="selected == i"></bq-choice>
           <br *ngIf="i == 2" />
         </div>
       </div>
+      <ng-template class="row" #drawList>
+        <ul class="list-group col-lg-12">
+          <li class="list-group-item choice" (click)="onClicked(i)" *ngFor="let choice of question.choices; let i = index">
+            <bq-choice drawType='list' [choice]="choice" [isSelected]="selected == i"></bq-choice>
+          </li>
+        </ul>
+      </ng-template>
     </div>
   </div>
 </div>

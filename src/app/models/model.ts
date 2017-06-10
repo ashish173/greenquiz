@@ -1,5 +1,6 @@
 export class Question {
   title: string;
+  drawType: string;
   choices: Choice[];
 }
 
