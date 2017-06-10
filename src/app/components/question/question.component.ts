@@ -27,7 +27,7 @@ import {
       transition(':enter', [
         query('.choice', style({ transform: 'translateZ(-500px)', opacity: 0})),
         query('.choice', [
-          stagger(200, [
+          stagger(100, [
             animate('300ms cubic-bezier(.35,0,.25,1)', style({ transform: 'translateZ(80px)', opacity: 1})),
             animate('400ms cubic-bezier(.35,0,.25,1)', style('*'))
           ])
