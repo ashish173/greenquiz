@@ -5,26 +5,36 @@ import {
   Input,
   Output,
   EventEmitter,
-  state,
-  transition,
-  trigger,
-  style,
-  animate
+  HostBinding
 } from '@angular/core';
+import {
+  trigger,
+  animate,
+  style,
+  transition,
+  group,
+  query,
+  stagger,
+  state,
+} from '@angular/animations';
 
 @Component({
   selector: 'bq-question',
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.scss'],
   animations: [
-    trigger('flyInLeft', [
-      state('in', style({ transform: 'translateX(0)' })),
-      transition('void => *', [
-        style({ transform: 'translateX(100%)' }),
-        animate(300)
-      ]),
-      transition('* => void', [
-        animate(300, style({ transform: 'translateX(-100%)' }))
+    trigger('pageAnimation', [
+      transition(':enter', [
+        query('.choices .choice', style({ transform: 'translateZ(-500px)', opacity: 0})),
+        query('.choices', [
+          stagger(800, [
+            query('.choice', [
+              stagger(200, [
+                animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
+              ])
+            ])
+          ])
+        ])
       ])
     ])
   ]
@@ -33,6 +43,9 @@ export class QuestionComponent implements OnInit {
   @Input() question: Question;
   @Input() selected: number;
   @Output() selectedChoice = new EventEmitter();
+
+  @HostBinding('@pageAnimation')
+  public animatePage = true;
 
   constructor() { }
 

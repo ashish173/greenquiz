@@ -4,12 +4,9 @@ import {
   Input,
   Output,
   EventEmitter,
-  state,
-  transition,
-  trigger,
-  style,
-  animate
+  HostBinding
 } from '@angular/core';
+import { animate, style, transition, trigger, state } from '@angular/animations';
 import {DUMMY_DATA} from './data/dummy-data';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
@@ -56,7 +53,7 @@ export class AppComponent {
       this.showSummary = true;
     } else {
       // FOR AUTO change question
-      if (this.activeSlideIndex === this.questions.length -1 && this.option) {
+      if (this.activeSlideIndex === this.questions.length - 1 && this.option) {
         this.activeSlideIndex = 0;
       } else if (this.option) {
         this.activeSlideIndex += 1;

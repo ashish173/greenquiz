@@ -17,6 +17,8 @@
   .card-body {
     .choice-image {
       width: 100%;
+      min-height: 200px;
+      background: gray;
       object-fit: cover;
       border-radius: 5px 5px 0 0;
     }

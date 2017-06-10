@@ -10,6 +10,7 @@
       <carousel [interval]="-1" [(activeSlide)]="activeSlideIndex" *ngIf="!showSummary">
         <slide *ngFor="let question of questions; let i = index">
           <bq-question
+            class="group"
             *ngIf="activeSlideIndex == i"
             [question]="question"
             (selectedChoice)="onSelected(i, $event)"
