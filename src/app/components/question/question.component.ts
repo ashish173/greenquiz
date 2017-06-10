@@ -25,14 +25,10 @@ import {
   animations: [
     trigger('pageAnimation', [
       transition(':enter', [
-        query('.choices .choice', style({ transform: 'translateZ(-500px)', opacity: 0})),
-        query('.choices', [
-          stagger(800, [
-            query('.choice', [
-              stagger(200, [
-                animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
-              ])
-            ])
+        query('.choice', style({ transform: 'translateZ(-500px)', opacity: 0})),
+        query('.choice', [
+          stagger(200, [
+            animate('800ms cubic-bezier(.35,0,.25,1)', style('*'))
           ])
         ])
       ])

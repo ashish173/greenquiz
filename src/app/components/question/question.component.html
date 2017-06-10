@@ -6,7 +6,7 @@
   <div class="choices">
     <div class="container-fluid">
       <div class="row">
-        <div class="choices col-lg-4 col-xs-6 col-sm-4 col-md-4" *ngFor="let choice of question.choices; let i = index">
+        <div class="col-lg-4 col-xs-6 col-sm-4 col-md-4" *ngFor="let choice of question.choices; let i = index">
           <bq-choice [choice]="choice" (click)="onClicked(i)" [isSelected]="selected == i"></bq-choice>
           <br *ngIf="i == 2" />
         </div>
