@@ -1,6 +1,7 @@
 export const DUMMY_DATA = [
   {
     'title': 'Pick an animal',
+    'drawType': 'card',
     'choices': [
       {
         'imageUrl': '/assets/images/bee.png',
@@ -36,6 +37,7 @@ export const DUMMY_DATA = [
   },
   {
     'title': 'What is your ideal weekend activity?',
+    'drawType': 'card',
     'choices': [
       {
         'imageUrl': '/assets/images/skate.png',
@@ -71,6 +73,7 @@ export const DUMMY_DATA = [
   },
   {
     'title': 'Pick an animal',
+    'drawType': 'list',
     'choices': [
       {
         'imageUrl': '/assets/images/bee.png',
@@ -106,6 +109,7 @@ export const DUMMY_DATA = [
   },
   {
     'title': 'What is your ideal weekend activity?',
+    'drawType': 'list',
     'choices': [
       {
         'imageUrl': '/assets/images/skate.png',

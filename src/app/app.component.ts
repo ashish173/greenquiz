@@ -1,11 +1,35 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  HostBinding
+} from '@angular/core';
+import { animate, style, transition, trigger, state } from '@angular/animations';
 import {DUMMY_DATA} from './data/dummy-data';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @Component({
   selector: 'bq-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    trigger('pageState', [
+      state('inactive', style({
+        boxShadow: '0 1px 3px #aaa',
+        border: '1px solid grey',
+        transform: 'scale(1)'
+      })),
+      state('active',   style({
+        boxShadow: '0 2px 5px #aaa',
+        border: '1px solid green',
+        transform: 'scale(1.4)',
+      })),
+      transition('inactive => active', animate('200ms ease-in')),
+      transition('active => inactive', animate('200ms ease-out'))
+    ])
+  ]
 })
 export class AppComponent {
   questions = DUMMY_DATA;
@@ -29,7 +53,7 @@ export class AppComponent {
       this.showSummary = true;
     } else {
       // FOR AUTO change question
-      if (this.activeSlideIndex === this.questions.length -1 && this.option) {
+      if (this.activeSlideIndex === this.questions.length - 1 && this.option) {
         this.activeSlideIndex = 0;
       } else if (this.option) {
         this.activeSlideIndex += 1;

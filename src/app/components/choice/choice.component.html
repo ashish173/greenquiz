@@ -1,7 +1,14 @@
-<div class="card" [ngClass]="{'active': isSelected}">
+<div *ngIf="drawType == 'card'; else drawListBlock" class="card" [ngClass]="{'active': isSelected}">
   <div class="card-body">
     <img class="choice-select" [hidden]="!isSelected" src="/assets/images/check.png">
     <img class="choice-image" [src]="choice.imageUrl" [alt]="choice.title">
     <h6 class="choice-title text-center">{{choice.title}}</h6>
   </div>
 </div>
+
+<ng-template #drawListBlock>
+  <div class="list-item" [ngClass]="{'active': isSelected}">
+    <img class="choice-select" [@selectionState]="isSelected ? 'active' : 'inactive'" src="/assets/images/check.png">
+    <span class="choice-title text-center">{{choice.title}}</span>
+  </div>
+</ng-template>

@@ -5,27 +5,26 @@
   cursor: pointer;
   border: none;
   border-radius: 5px;
-
-  &:hover, &.active {
+  &:hover,
+  &.active {
     box-shadow: 0 0 20px #999;
     transform: scale(1.05);
-    .card-body > .choice-select {
+    .card-body>.choice-select {
       opacity: 1;
     }
   }
-
   .card-body {
     .choice-image {
       width: 100%;
+      min-height: 200px;
+      background: gray;
       object-fit: cover;
       border-radius: 5px 5px 0 0;
     }
-
     .choice-title {
       padding-top: 1rem;
       font-size: 0.9rem;
     }
-
     .choice-select {
       transition: opacity 0.3s;
       position: absolute;
@@ -36,5 +35,19 @@
       top: 1rem;
       box-shadow: 0 0 5px #aaa;
     }
+  }
+}
+
+.list-item {
+  .choice-select {
+    transition: opacity 0.3s;
+    height: 2rem;
+    border-radius: 99px;
+    left: 1rem;
+    box-shadow: 0 0 5px #aaa;
+  }
+
+  .choice-title {
+    vertical-align: middle;
   }
 }

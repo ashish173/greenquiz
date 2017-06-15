@@ -25,6 +25,9 @@ body {
 
 .carousel.slide {
   right: 1.0rem;
+  .active {
+    width: 100%;
+  }
 }
 
 .carousel-indicators {

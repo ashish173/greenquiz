@@ -10,17 +10,17 @@
     height: 100%;
 
     .list-inline {
-      margin-top: 1rem;
+      margin-top: 2rem;
       justify-content: center;
       display: flex;
       li {
         display: inline-block;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         background: white;
         border-radius: 40px;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-left: 5px;
         margin-right: 5px;
         cursor: pointer;
@@ -28,10 +28,9 @@
         &.selected {
           background: lightgreen;
         }
-        &.active {
-          box-shadow: 0 0 10px lightgreen;
-          transform: scale(1.2);
-          border: 1px solid green;
+        .choice-selected {
+          height: 70%;
+          object-fit: cover;
         }
       }
     }
